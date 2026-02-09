@@ -1,0 +1,448 @@
+/* ===== CSS Variables for Easy Customization ===== */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --light-text: #666;
+    --background: #fefefe;
+    --section-bg: #f8f9fa;
+    --border-color: #e1e8ed;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+}
+
+/* ===== Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+/* ===== Header Section ===== */
+header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--border-color);
+}
+
+#name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: -0.5px;
+}
+
+.contact {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--light-text);
+    margin: 0;
+}
+
+/* ===== GitHub Link Styling ===== */
+.github-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.github-link:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.github-link:visited {
+    color: var(--accent-color);
+}
+
+/* Update print styles for links */
+@media print {
+    .github-link {
+        color: var(--text-color);
+        border-bottom: none;
+    }
+    
+    .github-link::after {
+        content: " (" attr(href) ")";
+        font-size: 0.85em;
+        color: var(--light-text);
+    }
+}
+
+.contact-item {
+    display: inline-block;
+}
+
+.separator {
+    margin: 0 var(--spacing-xs);
+    color: var(--border-color);
+}
+
+/* ===== Main Content ===== */
+main {
+    position: relative;
+}
+
+/* ===== Section Containers ===== */
+section {
+    background: var(--background);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Section Headings ===== */
+h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 3px solid var(--accent-color);
+    font-weight: 600;
+}
+
+/* ===== Work Experience Section Header ===== */
+.work-experience {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: var(--spacing-sm);
+}
+
+.work-experience:hover {
+    box-shadow: none;
+}
+
+.work-experience h2 {
+    background: var(--background);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Summary Section ===== */
+.summary p {
+    text-align: justify;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.summary strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* ===== Skills Section ===== */
+.skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills li {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    background: var(--section-bg);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skills li:last-child {
+    margin-bottom: 0;
+}
+
+.skills li:hover {
+    transform: translateX(5px);
+    border-color: var(--primary-color);
+}
+
+.skills strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+    display: inline-block;
+    min-width: 200px;
+}
+
+.skills span {
+    color: var(--text-color);
+}
+
+/* ===== Education Section ===== */
+.education-item p {
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
+}
+
+.education-item p:last-child {
+    margin-bottom: 0;
+}
+
+.degree {
+    color: var(--secondary-color);
+    font-size: 1.05rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.specialization {
+    color: var(--text-color);
+    font-style: italic;
+}
+
+.institution {
+    color: var(--light-text);
+}
+
+/* ===== Experience Section ===== */
+.experience {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.experience:hover {
+    box-shadow: none;
+}
+
+.job {
+    background: var(--background);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.job:last-child {
+    margin-bottom: 0;
+}
+
+.job:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.company {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background: var(--section-bg);
+    border-radius: 6px;
+}
+
+.job-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.job-dates {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--light-text);
+    font-style: italic;
+}
+
+.responsibilities {
+    list-style: none;
+    padding-left: 0;
+}
+
+.responsibilities li {
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.responsibilities li:last-child {
+    margin-bottom: 0;
+}
+
+.responsibilities li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ===== Additional Info Section ===== */
+.additional-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.additional-info li {
+    padding: var(--spacing-sm);
+    background: var(--section-bg);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.additional-info strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+    display: inline-block;
+    min-width: 150px;
+}
+
+.additional-info span {
+    color: var(--text-color);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.last-updated {
+    color: var(--light-text);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    body {
+        padding: var(--spacing-sm);
+    }
+
+    #name {
+        font-size: 2rem;
+    }
+
+    .contact {
+        font-size: 0.9rem;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .contact-item {
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skills strong,
+    .additional-info strong {
+        display: block;
+        margin-bottom: var(--spacing-xs);
+        min-width: auto;
+    }
+
+    .company {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #name {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .job-title {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: var(--spacing-sm);
+    }
+
+    .job {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    body {
+        background: white;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    section,
+    .job {
+        box-shadow: none;
+        page-break-inside: avoid;
+        border: 1px solid var(--border-color);
+    }
+
+    .work-experience h2 {
+        box-shadow: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    footer {
+        display: none;
+    }
+
+    section:hover,
+    .job:hover {
+        box-shadow: none;
+    }
+
+    .skills li:hover,
+    .responsibilities li:hover {
+        transform: none;
+    }
+}
